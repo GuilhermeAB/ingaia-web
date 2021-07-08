@@ -15,3 +15,10 @@
     },
   };
 </script>
+
+<style lang='scss' scoped>
+  #app {
+    background: url('./assets/home-background.png') no-repeat center center fixed;
+    background-size: cover;
+  }
+</style>

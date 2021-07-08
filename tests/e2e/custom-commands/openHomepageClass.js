@@ -13,7 +13,7 @@
 const assert = require('assert');
 
 module.exports = class {
-  async command() {
+  async command () {
     // Other Nightwatch commands are available via "this.api"
     this.api.init();
     this.api.waitForElementVisible('#app');

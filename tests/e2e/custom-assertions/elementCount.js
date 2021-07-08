@@ -12,7 +12,7 @@
  * @param {number} count
  */
 
-exports.assertion = function elementCount(selectorOrObject, count) {
+exports.assertion = function (selectorOrObject, count) {
   let selector;
 
   // when called from a page object element or section
@@ -27,7 +27,7 @@ exports.assertion = function elementCount(selectorOrObject, count) {
   this.expected = count;
   this.pass = (val) => val === count;
   this.value = (res) => res.value;
-  function evaluator(_selector) {
+  function evaluator (_selector) {
     return document.querySelectorAll(_selector).length;
   }
   this.command = (cb) => this.api.execute(evaluator, [selector], cb);
