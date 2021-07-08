@@ -1,5 +1,18 @@
 {
   "LOADING": "Loading",
   "SEARCH_CHARACTERS": "Search characters",
-  "SEARCH": "Search"
+  "SEARCH": "Search",
+  "DEAD": "Dead",
+  "LISTENING": "Listening",
+  "CANCEL": "Cancel",
+  "SORRY": "Sorry",
+  "SPEECH_RECOGNITION_UNSUPPORTED": "Voice recognition is not supported in your browser",
+  "CLOSE": "Close",
+  "WIP_WARNIN": "Work in progress",
+  "ABOUT": "About",
+  "ABOUT_CHARACTER_INFO": "{name} is a {gender} {race}.",
+  "ORIGIN": "Origin",
+  "PLANET": "Planet",
+  "RESIDENTS_COUNT": "{value} residents",
+  "LOCATION": "Location"
 }

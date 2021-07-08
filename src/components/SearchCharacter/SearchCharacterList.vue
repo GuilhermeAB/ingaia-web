@@ -9,27 +9,14 @@
         md='4'
         lg='3'
       >
-        <v-card flat min-height='250' class='ma-1'>
-          <v-card-text class='pa-0'>
-            <v-img :src='item.image' />
-          </v-card-text>
-          <v-card-actions>
-            <v-container fluid>
-              <v-row no-gutters>
-                <span class='d-inline-block text-truncate'>
-                  {{item.name}}
-                </span>
-              </v-row>
-              <v-row no-gutters>
-                <span class='caption font-weight-light d-inline-block text-truncate'>
-                  {{item.type}}
-                </span>
-              </v-row>
-            </v-container>
-          </v-card-actions>
-        </v-card>
+        <search-character-list-item :character='item' @open-details='openDetails(item)' />
       </v-col>
     </v-row>
+    <v-row no-gutters align='center' justify='center' class='mt-5'>
+      <search-character-list-pagination />
+    </v-row>
+
+    <search-character-list-item-details v-if='showDetailsDialog' :id='selectedId' v-model='showDetailsDialog' />
   </v-container>
 </template>
 
@@ -38,10 +25,27 @@
 
   export default {
     name: 'SearchCharacterList',
+    components: {
+      SearchCharacterListItem: () => import('./SearchCharacterListItem.vue'),
+      SearchCharacterListPagination: () => import('./SearchCharacterListPagination.vue'),
+      SearchCharacterListItemDetails: () => import('./SearchCharacterListItemDetails.vue'),
+    },
+    data: function () {
+      return {
+        showDetailsDialog: false,
+        selectedId: undefined,
+      };
+    },
     computed: {
       ...mapGetters('Character', [
         'list',
       ]),
+    },
+    methods: {
+      openDetails: function (item) {
+        this.selectedId = item.id;
+        this.showDetailsDialog = true;
+      },
     },
   };
 </script>

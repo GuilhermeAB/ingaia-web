@@ -4,7 +4,9 @@ import type {CharacterStateType} from './state';
 
 const getters: GetterTree<CharacterStateType, RootState> = {
   info: (state) => state.info,
-  list: (state) => state.list
+  currentPage: (state) => state.currentPage,
+  list: (state) => state.list,
+  search: (state) => state.search
 };
 
 export default getters;

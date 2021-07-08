@@ -1,4 +1,6 @@
-html { overflow-y: auto }
+html {
+  overflow-y: auto;
+}
 
 .wd-100 {
   width: 100%;
@@ -20,4 +22,21 @@ html { overflow-y: auto }
 
 *::-webkit-scrollbar-thumb {
   background-color: var(--v-primary-base);
+}
+
+.swal2-confirm {
+  background-color: var(--v-primary-darken2) !important;
+}
+
+.swal2-cancel {
+  background: none !important;
+  color: var(--v-error-base) !important;
+}
+
+.swal2-modal {
+  background-color: var(--v-secondary-darken1) !important;
+}
+
+.swal2-title, .swal2-html-container {
+  color: var(--v-secondary-lighten5) !important;
 }

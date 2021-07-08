@@ -39,13 +39,17 @@ export type InfoType = {
 };
 
 export type CharacterStateType = {
+  search?: string,
   list?: CharacterType[],
   info?: InfoType,
+  currentPage?: number,
 };
 
 const state = (): CharacterStateType => ({
+  search: undefined,
   list: undefined,
-  info: undefined
+  info: undefined,
+  currentPage: 1
 });
 
 export default state;

@@ -26,6 +26,26 @@
         </v-row>
       </v-col>
     </v-row>
+
+    <v-snackbar
+      v-model='snackbarWorkInProgress'
+      color='warning'
+      timeout='-1'
+    >
+      {{$t('WIP_WARNIN')}}
+
+      <template #action='{ attrs }'>
+        <v-btn
+          text
+          v-bind='attrs'
+          @click='snackbarWorkInProgress = false'
+        >
+          <v-icon>
+            mdi-close
+          </v-icon>
+        </v-btn>
+      </template>
+    </v-snackbar>
   </v-container>
 </template>
 
@@ -35,6 +55,11 @@
     name: 'Home',
     components: {
       SearchCharacter: () => import('@/components/SearchCharacter/SearchCharacter.vue'),
+    },
+    data: function () {
+      return {
+        snackbarWorkInProgress: process.env.NODE_ENV === 'production',
+      };
     },
   };
 </script>
