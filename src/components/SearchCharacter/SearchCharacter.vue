@@ -104,6 +104,7 @@
 
         const SpeechRecognition = webkitSpeechRecognition;
         this.recognition = new SpeechRecognition();
+        this.recognition.lang = 'en-US';
 
         this.recognition.onstart = () => {
           this.speechDialog = true;

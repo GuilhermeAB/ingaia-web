@@ -66,20 +66,22 @@
             <!-- Origin -->
             <!-- ---------------------------------------------------------------- -->
             <search-character-list-item-details-info
+              v-if='character.origin'
               :title='$t("ORIGIN")'
               :origin-name='character.origin.name'
               :dimension='character.origin.dimension'
-              :residents-count='character.origin.residents.length'
+              :residents-count='5'
             />
 
             <!-- ---------------------------------------------------------------- -->
             <!-- Location -->
             <!-- ---------------------------------------------------------------- -->
             <search-character-list-item-details-info
+              v-if='character.location'
               :title='$t("LOCATION")'
               :origin-name='character.location.name'
               :dimension='character.location.dimension'
-              :residents-count='character.location.residents.length'
+              :residents-count='5'
             />
           </v-col>
         </v-row>

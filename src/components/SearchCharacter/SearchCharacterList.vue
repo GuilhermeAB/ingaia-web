@@ -16,7 +16,7 @@
       <search-character-list-pagination />
     </v-row>
 
-    <search-character-list-item-details v-if='showDetailsDialog' :id='selectedId' v-model='showDetailsDialog' />
+    <search-character-list-item-details v-if='showDetailsDialog && selectedId' :id='selectedId' v-model='showDetailsDialog' />
   </v-container>
 </template>
 
@@ -40,6 +40,13 @@
       ...mapGetters('Character', [
         'list',
       ]),
+    },
+    watch: {
+      showDetailsDialog: function () {
+        if (!this.showDetailsDialog) {
+          this.selectedId = undefined;
+        }
+      },
     },
     methods: {
       openDetails: function (item) {

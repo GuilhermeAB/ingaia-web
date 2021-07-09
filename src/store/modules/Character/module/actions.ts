@@ -86,13 +86,15 @@ const actions: ActionTree<CharacterStateType, RootState> = {
               }
             }
           }
-        }`
+        }`,
+        errorPolicy: 'ignore'
       });
 
       dispatch('Loading/toggleLoading', {value: false}, {root: true});
 
       return data && data.character;
     } catch (e) {
+      console.log(e);
       dispatch('Loading/toggleLoading', {value: false}, {root: true});
 
       return undefined;
