@@ -20,7 +20,12 @@ Bônus
 
 - [x] Busca por voz
 
-## Contribuições
+## Configuração
+
+1. Crie um arquivo `.env` (na raiz do projeto) seguindo o exemplo em `.env.example`
+2. Edite os valores das váriaveis contidas em seu `.env` de acordo com o que for necessário
+3. Instale as dependências do projeto
+
 ```sh
 # Instalar dependencias
 yarn install
@@ -45,6 +50,16 @@ yarn test:unit
 ```
 yarn test:e2e
 ```
+
+## Contribuições
+
+Siga os passos a baixo para contribuir com alterações e novas funcionalidades para o projeto. Lembrando sempre de seguir as boas práticas de desenvolvimento e os padrões de código definidos pela equipe do projeto. **Nenhum código fora dos padrões ou com erros de lint serão aceitos**.
+
+1. Crie um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas alterações (`git commit -m 'Add some AmazingFeature'`)
+4. Faça um Push da sua Branch  (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
 
 ### Tecnologias utilizadas
 * [Vue.js](https://vuejs.org/)
