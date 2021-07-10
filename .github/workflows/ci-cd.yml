@@ -28,7 +28,7 @@ jobs:
     steps:
       - name: Deploy
         run: npm run deploy
-      env:
-        VUE_APP_I18N_LOCALE ${{ secrets.VUE_APP_I18N_LOCALE }}
-        VUE_APP_I18N_FALLBACK_LOCALE ${{ secrets.VUE_APP_I18N_FALLBACK_LOCALE }}
-        VUE_APP_API ${{ secrets.VUE_APP_API }}
+        env:
+          VUE_APP_I18N_LOCALE ${{ secrets.VUE_APP_I18N_LOCALE }}
+          VUE_APP_I18N_FALLBACK_LOCALE ${{ secrets.VUE_APP_I18N_FALLBACK_LOCALE }}
+          VUE_APP_API ${{ secrets.VUE_APP_API }}
