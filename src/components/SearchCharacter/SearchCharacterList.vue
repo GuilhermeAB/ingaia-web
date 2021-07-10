@@ -16,7 +16,7 @@
       <search-character-list-pagination />
     </v-row>
 
-    <search-character-list-item-details v-if='showDetailsDialog && selectedId' :id='selectedId' v-model='showDetailsDialog' />
+    <search-character-list-details v-if='showDetailsDialog && selectedId' :id='selectedId' v-model='showDetailsDialog' />
   </v-container>
 </template>
 
@@ -28,7 +28,7 @@
     components: {
       SearchCharacterListItem: () => import('./SearchCharacterListItem.vue'),
       SearchCharacterListPagination: () => import('./SearchCharacterListPagination.vue'),
-      SearchCharacterListItemDetails: () => import('./SearchCharacterListItemDetails.vue'),
+      SearchCharacterListDetails: () => import('./SearchCharacterListDetails.vue'),
     },
     data: function () {
       return {

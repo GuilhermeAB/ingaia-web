@@ -40,3 +40,16 @@ html {
 .swal2-title, .swal2-html-container {
   color: var(--v-secondary-lighten5) !important;
 }
+
+.card-info-title {
+  letter-spacing: 0.65em;
+  text-transform: uppercase;
+}
+
+.disabled-text {
+  color: #8C8C8C;
+}
+
+.disabled-light-text {
+  color: #d3d3d3;
+}
