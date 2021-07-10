@@ -22,7 +22,7 @@ jobs:
         run: npm run lint
 
   deploy:
-    runs-on: ubunto-latest
+    runs-on: ubuntu-latest
     needs: [lint]
 
     steps:
