@@ -5,7 +5,7 @@
     :fullscreen='isMobile'
     max-width='1034px'
   >
-    <v-card v-if='character' flat min-height='600px'>
+    <v-card v-if='character' flat min-height='600px' height='100%'>
       <!-- ---------------------------------------------------------------- -->
       <!-- App bar -->
       <!-- ---------------------------------------------------------------- -->
@@ -13,12 +13,18 @@
         <v-tooltip bottom>
           <template #activator='{ on }'>
             <v-btn
-              icon
+              :icon='isMobile'
+              :outlined='!isMobile'
               class='mr-1'
               v-on='on'
               @click.native='closeDialog'
             >
-              <v-icon>mdi-close</v-icon>
+              <v-icon v-if='isMobile'>
+                mdi-close
+              </v-icon>
+              <span v-else>
+                {{$t('CLOSE')}}
+              </span>
             </v-btn>
           </template>
           <span>{{$t('CLOSE')}}</span>
@@ -34,48 +40,18 @@
             cols='12'
             xs='12'
             sm='12'
-            md='4'
+            md='12'
             lg='4'
             xl='4'
           >
-            <v-card flat width='100%' height='100%' min-height='600px'>
-              <v-img :src='character.image' style='filter: blur(200px); position: absolute;' />
-
-              <v-card flat :class='{"card-image-mobile": isMobile, "card-image": !isMobile}'>
-                <v-img width='100%' height='88%' :src='character.image' />
-                <v-card-actions>
-                  <v-container fluid class='pa-0'>
-                    <v-row no-gutters>
-                      <v-tooltip bottom>
-                        <template #activator='{on}'>
-                          <span class='d-inline-block text-truncate' v-on='on'>
-                            {{character.name}}
-                          </span>
-                        </template>
-                        {{character.name}}
-                      </v-tooltip>
-                    </v-row>
-                    <v-row no-gutters>
-                      <v-tooltip bottom>
-                        <template #activator='{on}'>
-                          <span class='caption font-weight-light d-inline-block text-truncate' v-on='on'>
-                            {{character.type || '-'}}
-                          </span>
-                        </template>
-                        {{character.type || '-'}}
-                      </v-tooltip>
-                    </v-row>
-                  </v-container>
-                </v-card-actions>
-              </v-card>
-            </v-card>
+            <search-character-list-details-image :character-image='character.image' :character-name='character.name' :character-type='character.type' />
           </v-col>
 
           <v-col
             cols='12'
             xs='12'
             sm='12'
-            md='4'
+            md='12'
             lg='4'
             xl='4'
           >
@@ -129,6 +105,7 @@
     name: 'SearchCharacterListDetails',
     components: {
       SearchCharacterListDetailsInfo: () => import('./SearchCharacterListDetailsInfo.vue'),
+      SearchCharacterListDetailsImage: () => import('./SearchCharacterListDetailsImage.vue'),
     },
     props: {
       value: {
@@ -167,14 +144,3 @@
     },
   };
 </script>
-
-<style lang="scss" scoped>
-  .card-image {
-    width: 350px;
-    height: 500px;
-    position: fixed;
-    margin-left: -50px;
-    margin-top: 64px;
-    border: 2px solid #606060;
-  }
-</style>
