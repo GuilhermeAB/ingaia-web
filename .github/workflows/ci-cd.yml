@@ -55,9 +55,9 @@ jobs:
             VUE_APP_API
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-          VUE_APP_I18N_LOCALE: ${{ secrets.VUE_APP_I18N_LOCALE }}
-          VUE_APP_I18N_FALLBACK_LOCALE: ${{ secrets.VUE_APP_I18N_FALLBACK_LOCALE }}
-          VUE_APP_API: ${{ secrets.VUE_APP_API }}
+          VUE_APP_I18N_LOCALE: '${{ secrets.VUE_APP_I18N_LOCALE }}'
+          VUE_APP_I18N_FALLBACK_LOCALE: '${{ secrets.VUE_APP_I18N_FALLBACK_LOCALE }}'
+          VUE_APP_API: '${{ secrets.VUE_APP_API }}'
 
       - name: Echo 1
         run: echo $VUE_APP_API
