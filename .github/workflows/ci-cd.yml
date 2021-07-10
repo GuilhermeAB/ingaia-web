@@ -47,11 +47,18 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm install
 
-      - name: Deploy
+      - uses: chadly/prod-env-variables@v1
+        with:
+          keys: |
+            VUE_APP_I18N_LOCALE
+            VUE_APP_I18N_FALLBACK_LOCALE
+            VUE_APP_API
         env:
           VUE_APP_I18N_LOCALE: ${{ secrets.VUE_APP_I18N_LOCALE }}
           VUE_APP_I18N_FALLBACK_LOCALE: ${{ secrets.VUE_APP_I18N_FALLBACK_LOCALE }}
           VUE_APP_API: ${{ secrets.VUE_APP_API }}
+
+      - name: Deploy
         run: npm run build
 
       - name: Deploy to GitHub Pages
