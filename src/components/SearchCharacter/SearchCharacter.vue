@@ -1,7 +1,10 @@
 <template>
   <v-container fluid class='mt-5'>
     <v-row no-gutters align='center' justify='center' class='mb-5'>
-      <v-col xs='6' sm='6'>
+      <v-col
+        cols='8'
+        sm='6'
+      >
         <v-text-field
           ref='search'
           v-model='search'
@@ -24,7 +27,11 @@
           </template>
         </v-text-field>
       </v-col>
-      <v-col xs='2' sm='2'>
+
+      <v-col
+        cols='4'
+        sm='2'
+      >
         <v-btn outlined class='ml-3' @click='doSearch'>
           {{$t('SEARCH')}}
         </v-btn>
@@ -158,9 +165,6 @@
         if (this.recognition) {
           this.recognition.stop();
         }
-      },
-      bla: function () {
-        console.log('BLA');
       },
     },
   };

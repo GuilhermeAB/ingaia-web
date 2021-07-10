@@ -1,9 +1,9 @@
 <template>
   <v-dialog
     :value='value'
-    persistent
     :fullscreen='isMobile'
     max-width='1034px'
+    @input='closeDialog'
   >
     <v-card v-if='character' flat min-height='600px' height='100%'>
       <!-- ---------------------------------------------------------------- -->
@@ -52,32 +52,31 @@
             xs='12'
             sm='12'
             md='12'
-            lg='4'
-            xl='4'
+            lg='8'
+            xl='8'
           >
             <v-card flat width='100%' height='100%' min-height='600px'>
               <!-- ---------------------------------------------------------------- -->
               <!-- About -->
               <!-- ---------------------------------------------------------------- -->
               <v-row no-gutters>
-                <span class='card-info-title primary--text ml-3' style='margin-top: 64px;'>
+                <span class='card-info-title primary--text ml-10' style='margin-top: 64px;'>
                   {{$t('ABOUT')}}
                 </span>
               </v-row>
               <v-row no-gutters>
-                <span class='subtitle-1 font-weight-light ml-3'>
-                  {{$t('ABOUT_CHARACTER_INFO', { name: character.name, gender: character.gender, race: character.species })}}
+                <span class='subtitle-1 font-weight-light ml-10'>
+                  {{getCharacterAbout}}
                 </span>
               </v-row>
               <!-- ---------------------------------------------------------------- -->
               <!-- Origin -->
               <!-- ---------------------------------------------------------------- -->
               <search-character-list-details-info
-                v-if='character.origin'
                 :title='$t("ORIGIN")'
-                :origin-name='character.origin.name'
-                :dimension='character.origin.dimension'
-                :residents-count='5'
+                :origin-name='character.origin && character.origin.name'
+                :dimension='character.origin && character.origin.dimension'
+                :residents-count='character.origin && character.origin.residents && character.origin.residents.length'
               />
 
               <!-- ---------------------------------------------------------------- -->
@@ -88,7 +87,7 @@
                 :title='$t("LOCATION")'
                 :origin-name='character.location.name'
                 :dimension='character.location.dimension'
-                :residents-count='5'
+                :residents-count='character.location && character.location.residents && character.location.residents.length'
               />
             </v-card>
           </v-col>
@@ -125,6 +124,42 @@
     computed: {
       isMobile: function () {
         return this.$vuetify.breakpoint.mobile;
+      },
+      getCharacterAbout: function () {
+        const {
+          name,
+          gender,
+          species,
+          status,
+          episode,
+        } = this.character;
+        const isFemale = gender === 'Female';
+
+        const characterAbout = this.$t('ABOUT_CHARACTER_INFO', { name: name, gender: gender, race: species });
+        let characterStatus;
+
+        switch (status) {
+          case 'unknown': {
+            characterStatus = isFemale ? this.$t('ABOUT_CHARACTER_UNKNOWN_FEMALE_STATUS') : this.$t('ABOUT_CHARACTER_UNKNOWN_MALE_STATUS');
+            break;
+          }
+          case 'Alive': {
+            characterStatus = isFemale ? this.$t('ABOUT_CHARACTER_FEMALE_ALIVE') : this.$t('ABOUT_CHARACTER_MALE_ALIVE');
+            break;
+          }
+          case 'Dead': {
+            characterStatus = isFemale ? this.$t('ABOUT_CHARACTER_FEMALE_DEAD') : this.$t('ABOUT_CHARACTER_MALE_DEAD');
+            break;
+          }
+          default: {
+            characterStatus = isFemale ? this.$t('ABOUT_CHARACTER_UNKNOWN_FEMALE_STATUS') : this.$t('ABOUT_CHARACTER_UNKNOWN_MALE_STATUS');
+            break;
+          }
+        }
+
+        const lastSeen = this.$t('ABOUT_CHARACTER_LAST_SEEN', { value: episode[episode.length - 1].air_date });
+
+        return `${characterAbout} ${characterStatus} ${lastSeen}`;
       },
     },
     mounted: function () {

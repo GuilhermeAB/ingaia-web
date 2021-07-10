@@ -1,31 +1,31 @@
 <template>
   <div class='mt-12'>
     <v-row no-gutters>
-      <span class='card-info-title primary--text ml-3'>
+      <span class='card-info-title primary--text ml-10'>
         {{title}}
       </span>
     </v-row>
 
     <v-row no-gutters>
-      <span class='subtitle-2 disabled-text font-weight-light ml-3'>
+      <span class='subtitle-2 disabled-text font-weight-light ml-10'>
         {{$t('PLANET')}}
       </span>
     </v-row>
 
     <v-row no-gutters>
-      <span class='title font-weight-light ml-3'>
-        {{originName}}
+      <span class='title font-weight-light ml-10'>
+        {{originName || $t('UNKNOWN_ORIGIN')}}
       </span>
     </v-row>
 
     <v-row no-gutters>
-      <span class='subtitle-1 disabled-light-text font-weight-light ml-3 mt-n2'>
-        {{dimension}}
+      <span class='subtitle-1 disabled-light-text font-weight-light ml-10 mt-n2'>
+        {{dimension || $t('UNKNOWN_DIMENSION')}}
       </span>
     </v-row>
 
-    <v-row no-gutters align='center'>
-      <v-icon small class='ml-3' color='#8C8C8C'>
+    <v-row v-if='residentsCount' no-gutters align='center'>
+      <v-icon small class='ml-10' color='#8C8C8C'>
         mdi-account-multiple-outline
       </v-icon>
       <span class='subtitle-1 disabled-text font-weight-light ml-3'>
@@ -45,15 +45,15 @@
       },
       originName: {
         type: String,
-        required: true,
+        default: undefined,
       },
       dimension: {
         type: String,
-        required: true,
+        default: undefined,
       },
       residentsCount: {
         type: Number,
-        required: true,
+        default: undefined,
       },
     },
   };

@@ -84,6 +84,9 @@ const actions: ActionTree<CharacterStateType, RootState> = {
                 id,
                 name
               }
+            },
+            episode {
+              air_date
             }
           }
         }`,
