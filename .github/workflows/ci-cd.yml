@@ -50,17 +50,17 @@ jobs:
       - uses: chadly/prod-env-variables@v1
         with:
           keys: |
-            VUE_APP_I18N_LOCALE
-            VUE_APP_I18N_FALLBACK_LOCALE
-            VUE_APP_API
+            VUE_APP_I18N_LOCALE_PROD
+            VUE_APP_I18N_FALLBACK_LOCALE_PROD
+            VUE_APP_API_PROD
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-          VUE_APP_I18N_LOCALE: '${{ secrets.VUE_APP_I18N_LOCALE }}'
-          VUE_APP_I18N_FALLBACK_LOCALE: '${{ secrets.VUE_APP_I18N_FALLBACK_LOCALE }}'
-          VUE_APP_API: '${{ secrets.VUE_APP_API }}'
+          VUE_APP_I18N_LOCALE_PROD: '${{ secrets.VUE_APP_I18N_LOCALE }}'
+          VUE_APP_I18N_FALLBACK_LOCALE_PROD: '${{ secrets.VUE_APP_I18N_FALLBACK_LOCALE }}'
+          VUE_APP_API_PROD: '${{ secrets.VUE_APP_API }}'
 
       - name: Echo 1
-        run: echo $VUE_APP_API
+        run: echo $VUE_APP_API_PROD
 
       - name: Deploy
         run: npm run build
