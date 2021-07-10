@@ -9,9 +9,9 @@ Acesse a demo através de [link](https://guilhermeab.github.io/ingaia-web/#/)
 - [x] Aplicação online
 - [x] Repositório público no GitHub e acesso compartilhado com o usuário engenhariaingaia
 - [x] Consumir dados da API: https://rickandmortyapi.com/graphql
-- [ ] Telas desktop e mobile (WIP)
-- [ ] Acessibilidade
-- [ ] Navegação por teclado
+- [x] Telas desktop e mobile
+- [x] Acessibilidade
+- [x] Navegação por teclado
 - [ ] Testes unitários e testes de integração
 - [ ] Testes End to End
 - [ ] CI/CD
