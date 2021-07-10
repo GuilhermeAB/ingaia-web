@@ -13,7 +13,20 @@
         <v-row no-gutters align='center' justify='center'>
           <!-- <v-progress-circular color='primary' indeterminate size='64' /> -->
           <v-avatar size='187' rounded>
-            <v-img :src='require("@/assets/loading.png")' />
+            <v-img :alt='$t("LOADING_IMAGE")' :src='require("@/assets/loading.png")'>
+              <template #placeholder>
+                <v-row
+                  class='fill-height ma-0'
+                  align='center'
+                  justify='center'
+                >
+                  <v-progress-circular
+                    indeterminate
+                    color='primary'
+                  />
+                </v-row>
+              </template>
+            </v-img>
           </v-avatar>
         </v-row>
         <v-row no-gutters align='center' justify='center' class='mt-3'>

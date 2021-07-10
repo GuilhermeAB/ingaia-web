@@ -8,7 +8,20 @@
       @click='openDetails'
     >
       <v-card-text class='pa-0'>
-        <v-img :src='character.image'>
+        <v-img :alt='$t("CHARACTER_AVATAR", {name: character.name})' :src='character.image'>
+          <template #placeholder>
+            <v-row
+              class='fill-height ma-0'
+              align='center'
+              justify='center'
+            >
+              <v-progress-circular
+                indeterminate
+                color='primary'
+              />
+            </v-row>
+          </template>
+
           <v-overlay
             v-if='character.status === "Dead"'
             absolute

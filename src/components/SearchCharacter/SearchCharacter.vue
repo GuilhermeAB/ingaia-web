@@ -3,14 +3,20 @@
     <v-row no-gutters align='center' justify='center' class='mb-5'>
       <v-col xs='6' sm='6'>
         <v-text-field
+          ref='search'
           v-model='search'
-          :label='$t("SEARCH_CHARACTERS")'
           dense
           outlined
           hide-details
           autocomplete='off'
           @keyup.enter='doSearch'
         >
+          <template #label>
+            <div>
+              {{$t("SEARCH_CHARACTERS")}}
+              <span v-if='!isMobile'>({{$t('PRESS_SLASH_KEY')}})</span>
+            </div>
+          </template>
           <template #append>
             <v-icon @click='speech'>
               mdi-microphone
@@ -74,10 +80,24 @@
         recognition: undefined,
       };
     },
+    computed: {
+      isMobile: function () {
+        return this.$vuetify.breakpoint.mobile;
+      },
+    },
     watch: {
       search: debounce(function () {
         this.setSearch({ search: this.search });
       }, 200),
+    },
+    mounted: function () {
+      window.addEventListener('keyup', (event) => {
+        if (event.code === 'Slash' || event.key === '/') {
+          if (this.$refs.search) {
+            this.$refs.search.focus();
+          }
+        }
+      });
     },
     methods: {
       ...mapActions('Character', [
@@ -138,6 +158,9 @@
         if (this.recognition) {
           this.recognition.stop();
         }
+      },
+      bla: function () {
+        console.log('BLA');
       },
     },
   };

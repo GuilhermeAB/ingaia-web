@@ -3,7 +3,20 @@
     <v-img :src='characterImage' style='filter: blur(200px); position: absolute;' />
 
     <v-card flat class='card-image'>
-      <v-img width='100%' height='88%' :src='characterImage' />
+      <v-img :alt='$t("CHARACTER_AVATAR", {name: characterName})' width='100%' height='88%' :src='characterImage'>
+        <template #placeholder>
+          <v-row
+            class='fill-height ma-0'
+            align='center'
+            justify='center'
+          >
+            <v-progress-circular
+              indeterminate
+              color='primary'
+            />
+          </v-row>
+        </template>
+      </v-img>
 
       <v-card-actions>
         <v-container fluid class='pa-0'>
@@ -35,7 +48,20 @@
   <v-container v-else fluid class='pa-0'>
     <v-row no-gutters align='center' justify='center'>
       <v-card flat class='card-image-mobile'>
-        <v-img width='100%' :src='characterImage' />
+        <v-img :alt='$t("CHARACTER_AVATAR", {name: characterName})' width='100%' :src='characterImage'>
+          <template #placeholder>
+            <v-row
+              class='fill-height ma-0'
+              align='center'
+              justify='center'
+            >
+              <v-progress-circular
+                indeterminate
+                color='primary'
+              />
+            </v-row>
+          </template>
+        </v-img>
 
         <v-card-actions>
           <v-container fluid class='pa-0'>

@@ -18,6 +18,7 @@
 
 <style lang='scss' scoped>
   #app {
+    background-color: #000;
     background: url('./assets/home-background.png') no-repeat center center fixed;
     background-size: cover;
   }

@@ -18,7 +18,20 @@
             lg='6'
             xl='6'
           >
-            <v-img :src='require("@/assets/banner.png")' />
+            <v-img :alt='$t("BANNER_RICK_AND_MORTY")' :src='require("@/assets/banner.png")'>
+              <template #placeholder>
+                <v-row
+                  class='fill-height ma-0'
+                  align='center'
+                  justify='center'
+                >
+                  <v-progress-circular
+                    indeterminate
+                    color='primary'
+                  />
+                </v-row>
+              </template>
+            </v-img>
           </v-col>
         </v-row>
         <v-row no-gutters align='center' justify='center'>

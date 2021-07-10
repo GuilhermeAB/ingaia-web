@@ -14,5 +14,18 @@
   "ORIGIN": "Origin",
   "PLANET": "Planet",
   "RESIDENTS_COUNT": "{value} residents",
-  "LOCATION": "Location"
+  "LOCATION": "Location",
+  "ABOUT_CHARACTER_UNKNOWN_MALE_STATUS": "It can't be told if he is alive or dead.",
+  "ABOUT_CHARACTER_UNKNOWN_FEMALE_STATUS": "It can't be told if she is alive or dead.",
+  "ABOUT_CHARACTER_FEMALE_DEAD": "She is dead.",
+  "ABOUT_CHARACTER_MALE_DEAD": "He is dead.",
+  "ABOUT_CHARACTER_FEMALE_ALIVE": "She is alive and well.",
+  "ABOUT_CHARACTER_MALE_ALIVE": "He is alive and well",
+  "ABOUT_CHARACTER_LAST_SEEN": "Last seen in {value}.",
+  "UNKNOWN_ORIGIN": "Unknown",
+  "UNKNOWN_DIMENSION": "Unknown dimension",
+  "PRESS_SLASH_KEY": "Press /",
+  "CHARACTER_AVATAR": "{name} avatar",
+  "LOADING_IMAGE": "Loading image",
+  "BANNER_RICK_AND_MORTY": "Rick and Morty banner"
 }
