@@ -14,7 +14,7 @@ Acesse a demo através de [link](https://guilhermeab.github.io/ingaia-web/#/)
 - [x] Navegação por teclado
 - [ ] Testes unitários e testes de integração
 - [ ] Testes End to End
-- [ ] CI/CD
+- [x] CI/CD
 
 Bônus
 
