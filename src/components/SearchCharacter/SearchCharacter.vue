@@ -6,6 +6,7 @@
         sm='6'
       >
         <v-text-field
+          id='tfSearch'
           ref='search'
           v-model='search'
           dense
@@ -32,7 +33,7 @@
         cols='4'
         sm='2'
       >
-        <v-btn outlined class='ml-3' @click='doSearch'>
+        <v-btn id='btnSearch' outlined class='ml-3' @click='doSearch'>
           {{$t('SEARCH')}}
         </v-btn>
       </v-col>
