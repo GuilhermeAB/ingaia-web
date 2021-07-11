@@ -10,7 +10,14 @@ module.exports = {
     plugins: [
       new PreloadWebpackPlugin({
         rel: 'preload',
-        include: 'allAssets',
+        as: function (entry) {
+          if (/\.css$/.test(entry)) return 'style';
+          if (/\.scss$/.test(entry)) return 'style';
+          if (/\.sass$/.test(entry)) return 'style';
+          if (/\.png$/.test(entry)) return 'image';
+          return 'script';
+        },
+        include: ['main', 'home'],
       }),
     ],
   },
@@ -18,8 +25,14 @@ module.exports = {
   chainWebpack: (config) => {
     config.devServer.hot(true);
 
-    // config.devServer.clientLogLevel('silent');
     config.devServer.overlay({ warnings: true, errors: true });
+
+    config.module
+      .rule('file-loader')
+      .test(/\.(png|jpe?g|gif|svg)(\?.*)?$/)
+      .use('file-loader')
+      .loader('file-loader')
+      .end();
   },
 
   pluginOptions: {
