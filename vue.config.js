@@ -10,7 +10,7 @@ module.exports = {
     plugins: [
       new PreloadWebpackPlugin({
         rel: 'preload',
-        include: ['allAssets', 'main', 'home'],
+        include: 'allAssets',
       }),
     ],
   },
