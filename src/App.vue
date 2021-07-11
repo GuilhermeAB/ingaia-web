@@ -3,6 +3,7 @@
     <loading-full-screen />
     <v-main>
       <router-view />
+      <scroll-to-top />
     </v-main>
   </v-app>
 </template>
@@ -12,6 +13,7 @@
     name: 'App',
     components: {
       LoadingFullScreen: () => import('@/components/Core/LoadingFullScreen/LoadingFullScreen.vue'),
+      ScrollToTop: () => import('@/components/Core/ScrollToTop/ScrollToTop.vue'),
     },
   };
 </script>

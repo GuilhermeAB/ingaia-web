@@ -27,5 +27,7 @@
   "PRESS_SLASH_KEY": "Press /",
   "CHARACTER_AVATAR": "{name} avatar",
   "LOADING_IMAGE": "Loading image",
-  "BANNER_RICK_AND_MORTY": "Rick and Morty banner"
+  "BANNER_RICK_AND_MORTY": "Rick and Morty banner",
+  "PRESS_TO_SEARCH_WITH_VOICE": "Press to search with voice",
+  "SCROLL_TO_THE_TOP": "Go to the top"
 }

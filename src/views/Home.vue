@@ -40,7 +40,7 @@
       </v-col>
     </v-row>
 
-    <v-snackbar
+    <!-- <v-snackbar
       v-model='snackbarWorkInProgress'
       color='warning'
       timeout='-1'
@@ -58,7 +58,7 @@
           </v-icon>
         </v-btn>
       </template>
-    </v-snackbar>
+    </v-snackbar> -->
   </v-container>
 </template>
 

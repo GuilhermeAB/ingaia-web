@@ -21,7 +21,7 @@
             </div>
           </template>
           <template #append>
-            <v-icon @click='speech'>
+            <v-icon :aria-label='$t("PRESS_TO_SEARCH_WITH_VOICE")' @click='speech'>
               mdi-microphone
             </v-icon>
           </template>
