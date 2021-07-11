@@ -62,6 +62,9 @@ Siga os passos a baixo para contribuir com alterações e novas funcionalidades 
 5. Abra um Pull Request
 
 ### Tecnologias utilizadas
+
+Lista de algumas das tecnologias/pacotes que utilizei na aplicação
+
 * [Vue.js](https://vuejs.org/)
 * [Vuetify](https://vuetifyjs.com/en/)
 * [Vue Apollo](https://apollo.vuejs.org/)
@@ -70,3 +73,7 @@ Siga os passos a baixo para contribuir com alterações e novas funcionalidades 
 * [Vuex](https://vuex.vuejs.org/)
 * [Scss](https://sass-lang.com/)
 * [Vue CLI](https://cli.vuejs.org/)
+* [Webpack](https://webpack.js.org/)
+* [Webpack-chain](https://github.com/neutrinojs/webpack-chain)
+
+Entre outras ferramentas como o [TinyPng](https://tinypng.com/) para compressão das imagens do projeto.

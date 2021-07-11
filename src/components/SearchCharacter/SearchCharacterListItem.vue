@@ -86,7 +86,7 @@
 
 <style lang='scss' scoped>
   .on-card-hover {
-    box-shadow: 0px 0px 6px 2px var(--v-primary-base) !important;
+    box-shadow: 0 0 6px 2px var(--v-primary-base) !important;
     // transition: transform 0.5s ease;
     // transform: scale(0.9);
   }

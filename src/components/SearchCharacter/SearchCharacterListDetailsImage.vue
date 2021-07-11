@@ -125,7 +125,6 @@
     height: 500px;
     position: fixed;
     margin-left: -50px;
-    margin-top: 64px;
   }
 
   .card-image-mobile {
