@@ -7,7 +7,7 @@
 Aplicação de busca de personagens do Rick and Morty. Consumindo os dados de [Rick and Morty API](https://rickandmortyapi.com/graphql). Saiba mais acessando o [link](https://rickandmortyapi.com/).
 
 ## Demo
-Acesse a demo através do [link](https://guilhermeab.github.io/ingaia-web/#/)
+Acesse a demo através do [link](https://guilhermeab.github.io/rick-and-morty-web/#/)
 
 ## Requisitos
 
