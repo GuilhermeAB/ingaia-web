@@ -3,16 +3,16 @@
 [![Lighthouse Performance Badge](./lighthouse-results/lighthouse_performance.svg)](https://github.com/GuilhermeAB/ingaia-web)
 [![Lighthouse SEO Badge](./lighthouse-results/lighthouse_seo.svg)](https://github.com/GuilhermeAB/ingaia-web)
 
-# inGaia - Front-end Developer
-Aplicação de busca de personagens do Rick and Morty
+# Rick and Morty - Characters search (WEB)
+Aplicação de busca de personagens do Rick and Morty. Consumindo os dados de [Rick and Morty API](https://rickandmortyapi.com/graphql). Saiba mais acessando o [link](https://rickandmortyapi.com/).
 
 ## Demo
-Acesse a demo através de [link](https://guilhermeab.github.io/ingaia-web/#/)
+Acesse a demo através do [link](https://guilhermeab.github.io/ingaia-web/#/)
 
 ## Requisitos
 
-- [x] Aplicação online
-- [x] Repositório público no GitHub e acesso compartilhado com o usuário engenhariaingaia
+- [x] Aplicação online (github-pages)
+- [x] Repositório público no GitHub
 - [x] Consumir dados da API: https://rickandmortyapi.com/graphql
 - [x] Telas desktop e mobile
 - [x] Acessibilidade
@@ -70,8 +70,11 @@ Siga os passos a baixo para contribuir com alterações e novas funcionalidades 
 
 Lista de algumas das tecnologias/pacotes que utilizei na aplicação
 
+* [Javascript](https://www.javascript.com/)
+* [Typescript](https://www.typescriptlang.org/)
 * [Vue.js](https://vuejs.org/)
 * [Vuetify](https://vuetifyjs.com/en/)
+* [Graphql](https://graphql.org/)
 * [Vue Apollo](https://apollo.vuejs.org/)
 * [Vue i18n](https://kazupon.github.io/vue-i18n/)
 * [Vue Router](https://router.vuejs.org/)
@@ -82,6 +85,8 @@ Lista de algumas das tecnologias/pacotes que utilizei na aplicação
 * [Webpack-chain](https://github.com/neutrinojs/webpack-chain)
 * [Eslint](https://eslint.org/)
 * [StyleLint](https://stylelint.io/)
+* [Lodash](https://lodash.com/)
+* [Sweet-Alert](https://sweetalert2.github.io/)
 
 Entre outras ferramentas como o [TinyPng](https://tinypng.com/) para compressão das imagens do projeto.
 
