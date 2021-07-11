@@ -10,14 +10,8 @@ module.exports = {
     plugins: [
       new PreloadWebpackPlugin({
         rel: 'preload',
-        as: function (entry) {
-          if (/\.css$/.test(entry)) return 'style';
-          if (/\.scss$/.test(entry)) return 'style';
-          if (/\.sass$/.test(entry)) return 'style';
-          if (/\.png$/.test(entry)) return 'image';
-          return 'script';
-        },
-        include: ['main', 'home'],
+        as: 'style',
+        include: 'allAssets',
       }),
     ],
   },
