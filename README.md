@@ -75,5 +75,7 @@ Lista de algumas das tecnologias/pacotes que utilizei na aplicação
 * [Vue CLI](https://cli.vuejs.org/)
 * [Webpack](https://webpack.js.org/)
 * [Webpack-chain](https://github.com/neutrinojs/webpack-chain)
+* [Eslint](https://eslint.org/)
+* [StyleLint](https://stylelint.io/)
 
 Entre outras ferramentas como o [TinyPng](https://tinypng.com/) para compressão das imagens do projeto.

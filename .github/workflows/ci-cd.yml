@@ -29,6 +29,9 @@ jobs:
       - name: Lint check
         run: npm run lint
 
+      - name: StyleLint check
+        run: npm run lint:style
+
   deploy:
     runs-on: ubuntu-latest
     needs: [lint]
