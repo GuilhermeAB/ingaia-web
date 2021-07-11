@@ -13,6 +13,7 @@
           outlined
           hide-details
           autocomplete='off'
+          maxlength='200'
           @keyup.enter='doSearch'
         >
           <template #label>
