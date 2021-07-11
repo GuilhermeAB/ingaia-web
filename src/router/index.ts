@@ -8,7 +8,7 @@ const routes: RouteConfig[] = [
   {
     path: '/',
     name: 'Home',
-    component: async (): Promise<any> => import(/* webpackChunkName: "about" */ '../views/Home.vue')
+    component: async (): Promise<any> => import(/* webpackChunkName: "home" */ '../views/Home.vue')
   }
 ];
 

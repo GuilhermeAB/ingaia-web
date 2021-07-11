@@ -18,7 +18,7 @@ Acesse a demo através de [link](https://guilhermeab.github.io/ingaia-web/#/)
 
 Bônus
 
-- [x] Busca por voz
+- [x] Busca por voz (Apenas navegadores com suporte ao webkitSpeechRecognition, como o Google Chrome)
 
 ## Configuração
 
