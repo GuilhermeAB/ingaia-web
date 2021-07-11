@@ -1,4 +1,9 @@
-# inGaia - Front-end Developer (WIP)
+[![Lighthouse Accessibility Badge](./lighthouse-results/lighthouse_accessibility.svg)](https://github.com/GuilhermeAB/ingaia-web)
+[![Lighthouse Best Practices Badge](./lighthouse-results/lighthouse_best-practices.svg)](https://github.com/GuilhermeAB/ingaia-web)
+[![Lighthouse Performance Badge](./lighthouse-results/lighthouse_performance.svg)](https://github.com/GuilhermeAB/ingaia-web)
+[![Lighthouse SEO Badge](./lighthouse-results/lighthouse_seo.svg)](https://github.com/GuilhermeAB/ingaia-web)
+
+# inGaia - Front-end Developer
 Aplicação de busca de personagens do Rick and Morty
 
 ## Demo
@@ -79,3 +84,17 @@ Lista de algumas das tecnologias/pacotes que utilizei na aplicação
 * [StyleLint](https://stylelint.io/)
 
 Entre outras ferramentas como o [TinyPng](https://tinypng.com/) para compressão das imagens do projeto.
+
+
+### Outros
+
+Para analisar e gerar as badges do lighthouse siga os seguintes passos:
+
+```sh
+# Necessário node v12 ou superior
+npm i -g lighthouse-badges
+
+lighthouse-badges --urls <URL_A_SER_ANALISADA> -o lighthouse-results
+# lighthouse-results é o nome da pasta que será armazenado as badges. Caso deseje analisar mais de um url, separe-as por espaço
+```
+Saiba mais sobre o lighthouse clicando [aqui](https://developers.google.com/web/tools/lighthouse). Saiba mais sobre o lighthouse-badges clicando [aqui](https://github.com/emazzotta/lighthouse-badges).
