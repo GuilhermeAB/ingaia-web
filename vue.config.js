@@ -16,19 +16,6 @@ module.exports = {
     ],
   },
 
-  chainWebpack: (config) => {
-    config.devServer.hot(true);
-
-    config.devServer.overlay({ warnings: true, errors: true });
-
-    config.module
-      .rule('file-loader')
-      .test(/\.(png|jpe?g|gif|svg)(\?.*)?$/)
-      .use('file-loader')
-      .loader('file-loader')
-      .end();
-  },
-
   pluginOptions: {
     i18n: {
       locale: 'en',
