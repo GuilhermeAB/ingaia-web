@@ -18,7 +18,7 @@ Acesse a demo através do [link](https://guilhermeab.github.io/rick-and-morty-we
 - [x] Acessibilidade
 - [x] Navegação por teclado
 - [x] Testes unitários (Básicos)
-- [-] Testes End to End
+- [ ] Testes End to End
 - [x] CI/CD
 
 Bônus
