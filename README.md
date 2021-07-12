@@ -1,7 +1,7 @@
-[![Lighthouse Accessibility Badge](./lighthouse-results/lighthouse_accessibility.svg)](https://github.com/GuilhermeAB/ingaia-web)
-[![Lighthouse Best Practices Badge](./lighthouse-results/lighthouse_best-practices.svg)](https://github.com/GuilhermeAB/ingaia-web)
-[![Lighthouse Performance Badge](./lighthouse-results/lighthouse_performance.svg)](https://github.com/GuilhermeAB/ingaia-web)
-[![Lighthouse SEO Badge](./lighthouse-results/lighthouse_seo.svg)](https://github.com/GuilhermeAB/ingaia-web)
+[![Lighthouse Accessibility Badge](./lighthouse-results/lighthouse_accessibility.svg)](https://github.com/GuilhermeAB/rick-and-morty-web)
+[![Lighthouse Best Practices Badge](./lighthouse-results/lighthouse_best-practices.svg)](https://github.com/GuilhermeAB/rick-and-morty-web)
+[![Lighthouse Performance Badge](./lighthouse-results/lighthouse_performance.svg)](https://github.com/GuilhermeAB/rick-and-morty-web)
+[![Lighthouse SEO Badge](./lighthouse-results/lighthouse_seo.svg)](https://github.com/GuilhermeAB/rick-and-morty-web)
 
 # Rick and Morty - Characters search (WEB)
 Aplicação de busca de personagens do Rick and Morty. Consumindo os dados de [Rick and Morty API](https://rickandmortyapi.com/graphql). Saiba mais acessando o [link](https://rickandmortyapi.com/).
