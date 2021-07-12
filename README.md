@@ -51,11 +51,6 @@ yarn build
 yarn test:unit
 ```
 
-### Testes end-to-end
-```
-yarn test:e2e
-```
-
 ## Contribuições
 
 Siga os passos a baixo para contribuir com alterações e novas funcionalidades para o projeto. Lembrando sempre de seguir as boas práticas de desenvolvimento e os padrões de código definidos pela equipe do projeto. **Nenhum código fora dos padrões ou com erros de lint serão aceitos**.
