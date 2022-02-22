@@ -4,6 +4,9 @@
 [![Lighthouse SEO Badge](./lighthouse-results/lighthouse_seo.svg)](https://github.com/GuilhermeAB/rick-and-morty-web)
 
 # Rick and Morty - Characters search (WEB)
+
+Aplicação utilizando Vue e seguindo os requisitos de layout especificados para o processo seletivo da empresa Kenlo. Requisitos disponíveis em: https://github.com/ingaia/frontend-challenge, layout solicitado: https://www.figma.com/file/PTsl4gp2OOoEXuddyEx6GH/Frontend-Test---Rick-and-Morty
+
 Aplicação de busca de personagens do Rick and Morty. Consumindo os dados de [Rick and Morty API](https://rickandmortyapi.com/graphql). Saiba mais acessando o [link](https://rickandmortyapi.com/).
 
 ## Demo
